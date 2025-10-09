@@ -1,5 +1,4 @@
 
-import javax.swing.JOptionPane;
 
 public class Main {
 
@@ -18,9 +17,30 @@ public class Main {
         if (edad < 12 || edad > 70) {
             // JOptionPane.showMessageDialog(null, "Debe ingresar con un responsable");
         }
-
+/*
+ * 
+ 
         Jardin jardin = new Jardin();
         double valorAPagar = jardin.calcularValorMatricula();
         JOptionPane.showMessageDialog(null, "El valor a pagar es: " + valorAPagar);
+*/
+        FrascoDulce frasco = new FrascoDulce();
+        frasco.sabor = "Fresa";
+        System.out.println("El sabor es: " + frasco.sabor);
+        boolean envase = frasco.envasar(250, "2024-06-01");
+        boolean envase2 = frasco.envasar(100, "2024-06-01");
+        System.out.println("Envase: " + envase);
+        System.out.println("Envase2: " + envase2);
+
+        int cantidadExtraida = frasco.extraer(50);
+        System.out.println("Cantidad extraida: " + cantidadExtraida);
+        System.out.println("Cantidad restante: " + frasco.revisarCantidad());
+
+        int cantidadExtraida2 = frasco.extraer(180);
+        System.out.println("Cantidad extraida: " + cantidadExtraida2);
+        System.out.println("Cantidad restante: " + frasco.revisarCantidad());
+
+        FigurasGeometricas figuras = new FigurasGeometricas();
+        double area = figuras.calcularArea(2.0, 3.0);
     }
 }
