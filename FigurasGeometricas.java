@@ -1,17 +1,13 @@
 public class FigurasGeometricas {
-    /**
-     * Calcular area de un circulo
-     * @return
-     */
-    double calcularArea(double radio) {
-        return Math.PI * Math.pow(radio, 2);
+    int base;
+    int altura;
+
+    FigurasGeometricas(int base_p, int altura_p) {
+        this.base = base_p;
+        this.altura = altura_p;
     }
 
-    double calcularArea(double base, double altura, boolean esTriangulo) {
-        if (esTriangulo) {
-            return (base * altura) / 2;
-        } else {
-            return base * altura;
-        }
+    int calcularArea() {
+        return this.base * this.altura;
     }
 }
