@@ -1,20 +1,23 @@
-
+package banco;
 
 public class Cuenta {
     String numeroCuenta;
     double saldo;
     String tipo;
+    Cliente titular;
 
-    Cuenta(String numero, String tipo) {
+    Cuenta(String numero, String tipo, Cliente titular) {
         this.numeroCuenta = numero;
         this.saldo = 0;
         this.tipo = tipo;
+        this.titular = titular;
     }
 
-    Cuenta(String numero, String tipo, double saldoInicial) {
+    Cuenta(String numero, String tipo, double saldoInicial, Cliente titular) {
         this.numeroCuenta = numero;
         this.saldo = saldoInicial;
         this.tipo = tipo;
+        this.titular = titular;
     }
 
     double consultarSaldo() {
@@ -40,6 +43,10 @@ public class Cuenta {
 
     String getTipo() {
         return this.tipo;
+    }
+
+    public Cliente getTitular() {
+        return titular;
     }
 
     @Override
